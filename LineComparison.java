@@ -12,13 +12,16 @@ public class LineComparison {
 		return length;
 	}
 
-	public boolean checkEqual(Double length1, Double length2) {
+	public void compare(Double length1, Double length2) {
 
-		// Check equality of first and second line
-		if (length1.equals(length2)) {
-			return true;
+		int result = length1.compareTo(length2);
+
+		if (result > 0) {
+			System.out.println("\nFirst line is greater than second line");
+		} else if (result < 0) {
+			System.out.println("\nSecond line is greater than First line");
 		} else {
-			return false;
+			System.out.println("\nLines are equal");
 		}
 	}
 }
